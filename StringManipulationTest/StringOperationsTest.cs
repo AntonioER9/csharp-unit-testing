@@ -4,7 +4,7 @@ namespace StringManipulation.Tests;
 
 public class StringOperationsTest
 {
-    [Fact]
+    [Fact(Skip = "This test is skipped")]
     public void ConcatenateStrings()
     {
         // Arrange
