@@ -99,4 +99,20 @@ public class StringOperationsTest
         // Assert
         Assert.Equal(2, result);
     }
+
+    // [Fact(Skip = "This test is skipped")]
+    // public void ReadFile()
+    // {
+    //     // Arrange
+    //     var strOperations = new StringOperations();
+    //     var mockFileReader = new Mock<IFileReaderConector>();
+
+    //     mockFileReader.Setup(x => x.ReadFile("file.txt")).Returns("Reading file");
+
+    //     // Act
+    //     var result = strOperations.ReadFile(mockFileReader.Object, "file.txt");
+
+    //     // Assert
+    //     Assert.Equal("Reading file", result);
+    // }
 }
