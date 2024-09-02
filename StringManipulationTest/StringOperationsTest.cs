@@ -1,4 +1,6 @@
 using Xunit;
+using Microsoft.Extensions.Logging;
+using Moq;
 
 namespace StringManipulation.Tests;
 
@@ -82,5 +84,19 @@ public class StringOperationsTest
 
         // Assert
         Assert.Equal(expected, result);
+    }
+
+    [Fact(Skip = "This test is skipped")]
+    public void CountOccurrences()
+    {
+        // Arrange
+        var mockLogger = new Mock<ILogger<StringOperations>>();
+        var strOperations = new StringOperations();
+
+        // Act
+        var result = strOperations.CountOccurrences("hello", 'l');
+
+        // Assert
+        Assert.Equal(2, result);
     }
 }
