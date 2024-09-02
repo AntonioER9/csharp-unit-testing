@@ -68,4 +68,19 @@ public class StringOperationsTest
         // Assert
         Assert.ThrowsAny<ArgumentNullException>(() => strOperations.GetStringLength(null));
     }
+
+    [Theory]
+    [InlineData("V", 5)]
+    [InlineData("X", 10)]
+    public void FromRomanToNumber(string romanNumber, int expected)
+    {
+        // Arrange
+        var strOperations = new StringOperations();
+
+        // Act
+        var result = strOperations.FromRomanToNumber(romanNumber);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
 }
